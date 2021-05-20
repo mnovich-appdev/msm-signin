@@ -9,4 +9,7 @@
 #  user_id    :integer
 #
 class Bookmark < ApplicationRecord
+  def movie
+    return Movie.where({:id => self.movie_id})
+  end
 end
